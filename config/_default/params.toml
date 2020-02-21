@@ -61,7 +61,7 @@ sidebarPosition = "right" # bio, profile component layout position
 tocLevels = ["h2", "h3", "h4"] # minimum h2, maximum h4 in your article
 
 # footer
-showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
+showPoweredBy = false # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = true # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = true # show button at bottom left of footer.
@@ -145,7 +145,7 @@ copyrightLinkText = ""
 name = "facebook"
 [[share]]
 name = "twitter"
-username = ""
+username = "@luis6496"
 
 [[footerLinks]]
 name = ""
