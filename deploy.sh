@@ -6,7 +6,6 @@ echo "Updating public submodule"
 rm -rf public/*
 hugo --buildDrafts
 cd public
-git checkout master
 git add .
 git commit -m "${message}"
 git push origin master
