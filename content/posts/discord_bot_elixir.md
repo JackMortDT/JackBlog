@@ -20,7 +20,45 @@ authorImage: "images/avatar/mybioimage.jpg"
 
 Lo que se busca hacer con este post es hacer una interación entre el usuario y un bot creado apartir de elixir.
 
+### Requerimientos
+
+* Elixir (En este ejemplo se uso la versión 1.8)
+* Erlang (Erlang otp 23)
+
+### Crear una nueva aplicación
+
+Para crear un nuevo proyecto en elixir, basta con ejecutar el siguiente comando.
+
+```bash
+$ mix new new_app
+
+* creating README.md
+* creating .formatter.exs
+* creating .gitignore
+* creating mix.exs
+* creating config
+* creating config/config.exs
+* creating lib
+* creating lib/new_app.ex
+* creating test
+* creating test/test_helper.exs
+* creating test/new_app_test.exs
+
+Your Mix project was created successfully.
+You can use "mix" to compile it, test it, and more:
+
+    cd new_app
+    mix test
+
+Run "mix help" for more commands.
+```
+
+Al ejecutar el comando se te generaran diversos archivos en la carpeta new_app.
+
+
 ### Dependencias
+
+Una vez el proyecto este creado procederemos a agregar las dependencias necesarias para el ejemplo.
 ```elixir
   {:discord_ex, "~> 1.1.18"}
 ```
@@ -67,9 +105,9 @@ end
 
 ### Configuración
 
-Se necesita tener un toker para poder usar el bot, pero no es recomendable versionar ese token, por lo cual yo lo tomo de una variable de entorno nombrada como *DISCORD_TOKEN*.
+Se necesita tener un token para poder usar el bot, pero no es recomendable versionar ese token, por lo cual es recomendable tomarlo de una variable de entorno, en el caso de este ejemplo nombrada como *DISCORD_TOKEN*.
 
-En mi caso definí un caracter para poder hablar con el bot, y que solo interactue cuando ese comando esta precente como el primer caracter de la cadena escrita.
+Se define un un caracter para poder hablar con el bot, y que solo interactue cuando ese comando esta precente como el primer caracter de la cadena escrita.
 
 `config/config.exs`
 
@@ -82,9 +120,9 @@ config :discord_elixir, discord_prefix: "!"
 
 ### Aplicación
 
-En este caso se agrega un Supervisor junto con un children para poder tener una constante comunicación entre discord y el bot.
+Se agrega un Supervisor junto con un children para poder tener una constante comunicación entre discord y el bot.
 
-Borre el caso de ejemplo de un hola mundo cuando creas un nuevo proyecto con Mix y agregue la configuración necesaria para cuando se levanta la aplicación.
+Cuando creas un nuevo proyecto con Mix viene un ejemplo y un test de **hola mundo**, eso no es necesario tenerlo, por lo cual se quita y se agrega la configuración necesaria para la aplicación.
 
 `lib/discord_elixir.ex`
 ```elixir
@@ -111,7 +149,7 @@ defmodule DicordElixir do
 end
 ```
 
-En este caso declare un archivo llamado Worker, en la ruta de lib/manager, este es el archivo crucial para la conexión entre elixir y discord, ya que va a ser el que va a iniciar el socket con una comunicación continua entre ambos, este archivo se va a encargar de esa comunicación y la deteción de los eventos provenientes de discord.
+Se declara un archivo llamado Worker, en la ruta de lib/manager, este es el archivo crucial para la conexión entre elixir y discord, ya que va a ser el que va a iniciar el socket con una comunicación continua entre ambos, este archivo se va a encargar de esa comunicación y la deteción de los eventos provenientes de discord.
 
 `lib/manager/worker.ex`
 ```elixir
@@ -144,13 +182,13 @@ end
 A repasar algunas lineas del archivo.
 
 * 9. Se hace la conexión y es el encargado de recibir el token anteriormente pasado en el archivo de inicio
-* 12. Es el que se encarga de escuchar los eventos de discord, se recibe un mensaje, el payload que es toda la infomación proveniente de quien escribio el mensaje, cuando, si es un bot o no etc y un state o estado.
-* 14. Agregue esta validación ya que el bot puede ver y recibir los mensajes de otros bots, en este ejemplo de prueba eso no me interesa, pero para que sepan que se puede tener una comunicación entre bots de una manera muy sencilla.
-* 15. Mande llamar a archivo de utilidad, para el proceso de todos los mensajes, esto para hacer las llamadas de una forma asincróna.
+* 12. Es el que se encarga de escuchar los eventos de discord, se recibe un mensaje, el payload que es toda la infomación proveniente de quien escribio el mensaje, cuando, si es un bot o no etc y un estado.
+* 14. Validación para verificar si el autor del mensaje es un bot o no.
+* 15. Archivo de utilidad, para el proceso de todos los mensajes, es recomendable trabajarlo de manera asincrona.
 
-Por último, declare un archivo llamado **ProcessMessageUtil**, para poder procesar los mensajes llegados al evento y no tener todo lleno en nuestro archivo de conexión.
+Por último, se declara un archivo llamado **ProcessMessageUtil**, para poder procesar los mensajes llegados al evento y no tener todo lleno en nuestro archivo de conexión.
 
-En este ejemplo solo tendre 2 procesamientos de mensajes, para el comando _**!hello**_ y para el comando _**!info**_.
+En este ejemplo solo se tienen 2 procesamientos de mensajes, para el comando _**!hello**_ y para el comando _**!info**_.
 
 `lib/util/process_message_util.ex`
 ```elixir
@@ -193,6 +231,6 @@ A repasar algunas lineas de código
 * 10. Se manda llamar la función process_command que se va a encargar de procesar los mensajes aparte de un default, en el cual no se va a mandar mensaje.
 * 27. Función encargada de mandar mensajes por el Channel a discord. 🤖
 
-Con eso termino este ejemplo, dejo el repositorio de [Github] y me despido por hoy 🦎.
+Con eso se termina este ejemplo, dejo el repositorio de [Github] y me despido por hoy 🦎.
 
 [Github]: https://github.com/JackMortDT/discord_bot_elixir_demo
