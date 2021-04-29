@@ -14,7 +14,7 @@ categories:
 - Programming
 series:
 - Fun
-image: images/posts/how-elixir-matches-variables/logo.png
+image: images/posts/elixir/dnarna.jpeg
 authorImage: "images/avatar/mybioimage.jpg"
 ---
 
@@ -113,7 +113,7 @@ Entonces, ya que tenemos esto y habiendo pasado la primera prueba con el código
 
 <script id="asciicast-P1kenlcxY59JRpazrvboO3iGI" src="https://asciinema.org/a/P1kenlcxY59JRpazrvboO3iGI.js" data-size="small"></script>
 
-Con esto ya pasamos los test, pero no me convence al 100, para esto es algo bueno el TDD, podemos ir haciendo refactor a nuestro código sin mover su funcionalidad.
+Con esto ya pasamos los test, pero no me convence al 100, para esto es algo bueno el TDD, podemos ir haciendo refactor a nuestro código sin afectar la funcionalidad del código.
 
 ### **Lo que tenemos que cambiar**
 
@@ -150,7 +150,7 @@ defmodule RnaTranscription do
 end
 ```
 
-De acuerdo con diferentes benchmark el **for** consume más recursos que un [**Enum.map**](https://hexdocs.pm/elixir/Map.html#content), entonces vamos a cambiar un poco nuestro código.
+De acuerdo con diferentes benchmarks el **for** consume más recursos que un [**Enum.map**](https://hexdocs.pm/elixir/Map.html#content), entonces vamos a cambiar un poco nuestro código.
 
 ```elixir
 defmodule RnaTranscription do
@@ -175,4 +175,5 @@ defmodule RnaTranscription do
 end
 ```
 
+Y así habremos terminado el ejercicio de **RNA Transcription**.
 # 🦎
