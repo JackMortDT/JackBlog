@@ -2,7 +2,7 @@
 author: JackMortDT
 title: Vinculación de variables en Elixir
 date: 2021-04-23T12:00:47+09:00
-description: Creación de bot con elixir para discord
+description: Como vincula Elixir valores con variables
 draft: false
 hideToc: false
 enableToc: true
