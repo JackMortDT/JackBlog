@@ -1,23 +1,20 @@
-baseURL: "https://examplesite.com/"
-title: ExampleSite
+baseURL: "https://jackmortdt.github.io/"
+title: Jack Blog
 paginate: 5
 theme: PaperMod
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-googleAnalytics: UA-123-45
 minify:
   disableXML: true
   minifyOutput: true
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: Jack Blog
+  description: "Jack Blog"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  author: JackMortDT
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -67,12 +64,8 @@ params:
     Title: "Hi there 👋"
     Content: Welcome to my blog
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/JackMortDT"
   analytics:
     google:
       SiteVerificationTag: "XYZabc"
@@ -85,7 +78,7 @@ params:
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/JackMortDT/JackBlog/tree/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
   # for search
@@ -108,17 +101,7 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
