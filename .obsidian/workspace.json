@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "f42c71945a6baae4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ac2dc700b084542",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b4a3551c4fb4699",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9a9bd2558c2d3e57",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5fb4e5cf283d92f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01bb8d8266e18262",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6f69bbd5aa42a1c6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e35fcebd1affb3a4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "98480ca235cbc9d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "60a10a22abd0c642",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62a6119ef9ac1282",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "96f89f0499aed793",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "353150ad61e52d7e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bb7b12af06668601",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "01bb8d8266e18262",
+  "lastOpenFiles": [
+    "themes/PaperMod/theme.toml",
+    "themes/PaperMod/layouts/partials/templates/twitter_cards.html",
+    "themes/PaperMod/layouts/partials/templates/schema_json.html",
+    "themes/PaperMod/layouts/partials/templates/opengraph.html",
+    "themes/PaperMod/layouts/_default/_markup/render-image.html",
+    "themes/PaperMod/layouts/shortcodes/rtl.html",
+    "themes/PaperMod/layouts/shortcodes/rawhtml.html",
+    "themes/PaperMod/layouts/shortcodes/ltr.html",
+    "themes/PaperMod/layouts/shortcodes/inTextImg.html",
+    "themes/PaperMod/layouts/shortcodes/figure.html",
+    "themes/PaperMod/layouts/shortcodes/collapse.html",
+    "themes/PaperMod/images/tn.png",
+    "themes/PaperMod/images/screenshot.png",
+    "themes/PaperMod/README.md",
+    "public/posts/navigating_the_labyrinth_of_version_control/labyrinth.jpeg"
+  ]
+}
